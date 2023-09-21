@@ -42,6 +42,8 @@
         tools:layout="@layout/fragment_quarto" >
         <action
             android:id="@+id/action_quarto_to_primeiro"
-            app:destination="@id/primeiroFragment" />
+            app:destination="@id/primeiroFragment"
+            app:popUpTo="@id/primeiroFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

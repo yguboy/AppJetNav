@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import br.edu.up.app.databinding.FragmentQuartoBinding
 
 class QuartoFragment : Fragment() {
@@ -14,7 +15,16 @@ class QuartoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentQuartoBinding.inflate(layoutInflater)
+
+        binding.btnPrimeiro.setOnClickListener {
+            val action = QuartoFragmentDirections.actionQuartoToPrimeiro()
+            findNavController().navigate(action)
+        }
+
+        binding.btnVoltar.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
         return binding.root
     }
-
 }

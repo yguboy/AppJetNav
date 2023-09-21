@@ -22,11 +22,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="53dp"
+        android:shadowColor="#8BC34A"
         android:text="Voltar"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#8BC34A"
+        android:textColorHint="#4CAF50"
+        android:textColorLink="#8BC34A"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:rippleColor="#4CAF50"
+        app:strokeColor="#8BC34A" />
 
     <Button
         android:id="@+id/btnQuarto"
