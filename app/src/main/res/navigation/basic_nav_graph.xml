@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basic_nav_graph"
+    app:startDestination="@id/primeiroFragment">
+
+    <fragment
+        android:id="@+id/primeiroFragment"
+        android:name="br.edu.up.app.PrimeiroFragment"
+        android:label="fragment_primeiro"
+        tools:layout="@layout/fragment_primeiro" >
+        <action
+            android:id="@+id/action_primeiro_to_segundo"
+            app:destination="@id/segundoFragment" />
+        <action
+            android:id="@+id/action_primeiro_to_terceiro"
+            app:destination="@id/terceiroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFragment"
+        android:name="br.edu.up.app.SegundoFragment"
+        android:label="fragment_segundo"
+        tools:layout="@layout/fragment_segundo" >
+        <action
+            android:id="@+id/action_segundo_to_quarto"
+            app:destination="@id/quartoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terceiroFragment"
+        android:name="br.edu.up.app.TerceiroFragment"
+        android:label="fragment_terceiro"
+        tools:layout="@layout/fragment_terceiro" >
+        <action
+            android:id="@+id/action_terceiro_to_quarto"
+            app:destination="@id/quartoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quartoFragment"
+        android:name="br.edu.up.app.QuartoFragment"
+        android:label="fragment_quarto"
+        tools:layout="@layout/fragment_quarto" >
+        <action
+            android:id="@+id/action_quarto_to_primeiro"
+            app:destination="@id/primeiroFragment" />
+    </fragment>
+</navigation>
