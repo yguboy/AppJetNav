@@ -16,13 +16,13 @@ class TerceiroFragment : Fragment() {
     ): View? {
         val binding = FragmentTerceiroBinding.inflate(layoutInflater)
 
+        binding.btnVoltar.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
         binding.btnQuarto.setOnClickListener {
             val action = TerceiroFragmentDirections.actionTerceiroToQuarto()
             findNavController().navigate(action)
-        }
-
-        binding.btnVoltar.setOnClickListener {
-            findNavController().popBackStack()
         }
 
         return binding.root

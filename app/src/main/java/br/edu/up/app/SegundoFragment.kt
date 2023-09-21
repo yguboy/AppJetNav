@@ -16,13 +16,13 @@ class SegundoFragment : Fragment() {
     ): View? {
         val binding = FragmentSegundoBinding.inflate(layoutInflater)
 
+        binding.btnVoltar.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
         binding.btnQuarto.setOnClickListener {
             val action = SegundoFragmentDirections.actionSegundoToQuarto()
             findNavController().navigate(action)
-        }
-
-        binding.btnVoltar.setOnClickListener {
-            findNavController().popBackStack()
         }
 
         return binding.root
